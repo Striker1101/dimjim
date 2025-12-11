@@ -312,26 +312,46 @@
                   </ul>
                 </div>
                 <div class="sv-gallery-wrapper">
-                  <div class="row gy-4">
-                    <div class="col-6">
+                  <div
+                    id="slide_images"
+                    style="
+                      display: flex;
+                      flex-direction: row; /* horizontal by default */
+                      flex-wrap: wrap;
+                      gap: 16px;
+                      overflow-x: auto;
+                    "
+                  >
+                    <div style="flex: 0 0 50%">
                       <div class="sv-sm-img">
                         <img
-                          class="w-100"
+                          style="width: 100%"
                           src="assets/img/service/CCTV-smart-security-integration2.jpeg"
                           alt="Blog Image"
                         />
                       </div>
                     </div>
-                    <div class="col-6">
+                    <div style="flex: 0 0 50%">
                       <div class="sv-sm-img">
                         <img
-                          class="w-100"
+                          style="width: 100%"
                           src="assets/img/service/CCTV-smart-security-integration3.webp"
                           alt="Blog Image"
                         />
                       </div>
                     </div>
                   </div>
+
+                  <style>
+                    @media (max-width: 1023px) {
+                      #slide_images {
+                        flex-direction: column !important; /* force override inline style */
+                      }
+                      #slide_images > div {
+                        flex: 0 0 100% !important; /* force full width on mobile */
+                      }
+                    }
+                  </style>
                 </div>
               </div>
             </div>
