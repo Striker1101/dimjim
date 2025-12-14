@@ -1,4 +1,5 @@
-const API = 'http://localhost:4000/api/newsletter';
+// const API = 'http://localhost:4000/api/newsletter';
+const API = 'http://admin.dijimgroup.com/api/newsletter';
 const ADMIN_PASSWORD = 'admin';
 
 const modal = document.getElementById('authModal');

@@ -1,4 +1,7 @@
-const api = "http://localhost:4000/api/contact";
+// const api = "http://localhost:4000/api/contact";
+const api = "http://admin.dijimgroup.com/api/contact";
+
+
 const form = document.getElementById("contact_form");
 
 form.addEventListener("submit", async (e) => {
