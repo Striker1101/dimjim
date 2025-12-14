@@ -80,6 +80,7 @@
       gtag("js", new Date());
       gtag("config", "AW-17780772867");
     </script>
+    <script src="./js/general.js" defer></script>
   </head>
 
   <body>
@@ -1930,14 +1931,19 @@
               <div class="widget footer-widget">
                 <h3 class="widget_title">Get In Touch</h3>
                 <div class="th-widget-contact">
-
-                   <div class="info-box_text">
+                  <div class="info-box_text">
                     <div class="icon">
-                      <img src="assets/img/icon/fb.svg" alt="img" style="width: 30px; color: white;"/>
+                      <img
+                        src="assets/img/icon/fb.svg"
+                        alt="img"
+                        style="width: 30px; color: white"
+                      />
                     </div>
                     <div class="details">
                       <p>
-                        <a href="https://www.facebook.com/share/17mM3UHwMt/?mibextid=wwXIfr" class="info-box_link"
+                        <a
+                          href="https://www.facebook.com/share/17mM3UHwMt/?mibextid=wwXIfr"
+                          class="info-box_link"
                           >Facebook</a
                         >
                       </p>
@@ -1945,13 +1951,19 @@
                     </div>
                   </div>
 
-                   <div class="info-box_text">
+                  <div class="info-box_text">
                     <div class="icon">
-                      <img src="assets/img/icon/ins.svg" alt="img" style="width: 30px;" />
+                      <img
+                        src="assets/img/icon/ins.svg"
+                        alt="img"
+                        style="width: 30px"
+                      />
                     </div>
                     <div class="details">
                       <p>
-                        <a href="https://www.instagram.com/dijimgroup?igsh=MXN0b2lyMXQ4anExaA==" class="info-box_link"
+                        <a
+                          href="https://www.instagram.com/dijimgroup?igsh=MXN0b2lyMXQ4anExaA=="
+                          class="info-box_link"
                           >Instagram</a
                         >
                       </p>
@@ -1961,7 +1973,11 @@
 
                   <div class="info-box_text">
                     <div class="icon">
-                      <img src="assets/img/icon/phone.svg" alt="img"  style="width: 28px;"/>
+                      <img
+                        src="assets/img/icon/phone.svg"
+                        alt="img"
+                        style="width: 28px"
+                      />
                     </div>
                     <div class="details">
                       <p>
@@ -1974,7 +1990,11 @@
                   </div>
                   <div class="info-box_text">
                     <div class="icon">
-                      <img src="assets/img/icon/envelope.svg" alt="img" style="width: 28px;"/>
+                      <img
+                        src="assets/img/icon/envelope.svg"
+                        alt="img"
+                        style="width: 28px"
+                      />
                     </div>
                     <div class="details">
                       <p>
@@ -1989,7 +2009,11 @@
                   </div>
                   <div class="info-box_text">
                     <div class="icon">
-                      <img src="assets/img/icon/location-dot.svg" alt="img" style="width: 28px;" />
+                      <img
+                        src="assets/img/icon/location-dot.svg"
+                        alt="img"
+                        style="width: 28px"
+                      />
                     </div>
                     <div class="details">
                       <p>Heron Way Hatfield United Kingdom AL10 8QP</p>
@@ -2004,16 +2028,21 @@
                 <div class="newsletter-widget">
                   <div class="footer-search-contact">
                     <h4 class="newsletter-title">Email Address</h4>
-                    <form>
+                    <form id="newsletterForm">
                       <input
                         class="form-control"
                         type="email"
-                        placeholder="Enter your email address...."
+                        name="email"
+                        id="newsletterEmail"
+                        placeholder="Enter your email address..."
+                        required
                       />
                       <button type="submit" class="icon-btn style2">
                         <i class="fas fa-paper-plane"></i>
                       </button>
                     </form>
+
+                    <p id="newsletterMsg"></p>
                   </div>
                 </div>
               </div>

@@ -81,6 +81,7 @@
       gtag("js", new Date());
       gtag("config", "AW-17780772867");
     </script>
+    <script src="./js/general.js" defer></script>
   </head>
 
   <body>
@@ -571,16 +572,21 @@
                 <div class="newsletter-widget">
                   <div class="footer-search-contact">
                     <h4 class="newsletter-title">Email Address</h4>
-                    <form>
+                    <form id="newsletterForm">
                       <input
                         class="form-control"
                         type="email"
-                        placeholder="Enter your email address...."
+                        name="email"
+                        id="newsletterEmail"
+                        placeholder="Enter your email address..."
+                        required
                       />
                       <button type="submit" class="icon-btn style2">
                         <i class="fas fa-paper-plane"></i>
                       </button>
                     </form>
+
+                    <p id="newsletterMsg"></p>
                   </div>
                 </div>
               </div>

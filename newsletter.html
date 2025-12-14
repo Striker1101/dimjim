@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Newsletter Admin</title>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-box {
+      background: #fff;
+      padding: 25px;
+      width: 320px;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.2);
+    }
+
+    .modal-box input,
+    .modal-box button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .modal-box button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .controls input {
+      padding: 10px;
+      flex: 1;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    tr:hover {
+      background: #f9fafb;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script src="./js/newsletter.js" defer></script>
+</head>
+<body>
+
+  <!-- Password Modal -->
+  <div class="modal" id="authModal">
+    <div class="modal-box">
+      <h3>Admin Access</h3>
+      <input type="password" id="adminPass" placeholder="Enter password" />
+      <button onclick="authenticate()">Login</button>
+      <p id="authError" style="color:red"></p>
+    </div>
+  </div>
+
+  <!-- Admin Content -->
+  <div id="app" class="hidden">
+    <h2>Newsletter Subscribers</h2>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search email..."
+      />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody id="newsletterTable"></tbody>
+    </table>
+  </div>
+
+  <script src="newsletter.js"></script>
+</body>
+</html>
